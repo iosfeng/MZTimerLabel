@@ -278,6 +278,8 @@
 
 - (void)stop {
     [self pause];
+    pausedTime = nil;
+    startCountDate = nil;
 
     if ([_delegate respondsToSelector:@selector(timerLabel:stopCountDownTimerWithTime:)]) {
         [_delegate timerLabel:self stopCountDownTimerWithTime:timeUserValue];
